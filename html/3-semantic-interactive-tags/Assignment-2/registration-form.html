@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 3px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      margin: 1px;
+      cursor: pointer;
+    
+    }
+    #gender-group{
+        display: flex;
+        gap: 5px;
+        margin-top: 5px;
+    }
+    .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    button {
+      background: #222;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #222;
+      color: #fff;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>User Registration Form</h1>
+  </header>
+
+  <main>
+    <form action="submit.html" method="post">
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" placeholder="At least 6 characters" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+      </div>
+
+      <div class="form-group" >
+        <label>Gender:</label>
+        <div id="gender-group">
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+          <option value="">Select</option>
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+          <option value="canada">Canada</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bio">Short Bio:</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+      </div>
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions</label>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Registration Portal</p>
+  </footer>
+</body>
+</html>

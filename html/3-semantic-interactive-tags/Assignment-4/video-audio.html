@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video and Audio Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+.media {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 30px auto;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+video, audio {
+  max-width: 100%;
+  border-radius: 10px;
+  outline: none;
+}
+
+.caption {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-top: 12px;
+}
+
+.description {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+.adjust{
+    display: flex;
+    justify-content: center;
+}
+
+</style>
+
+</head>
+<body>
+  <h1>Media Showcase</h1>
+  <div class="media">
+    <div class="adjust">
+        <video src="video.mp4" controls width="400"></video>
+    </div>
+    <div class="caption adjust">Caption: A demo video explaining software usage.</div>
+    <p class="description">This video provides a step-by-step walkthrough of how to use the Apty platform. It covers key features such as onboarding, tooltips, and guided workflows for better user adoption.</p>
+  </div>
+
+  <div class="media">
+    <div class="adjust">
+        <audio src="audio.mp3" controls class="adjust"></audio>
+    </div>
+    <div class="caption adjust">Caption: Background music sample for relaxation.</div>
+    <p class="description">This audio clip features soft instrumental background music. It is designed to help users stay calm and focused while working or studying.</p>
+  </div>
+
+</body>
+</html>
