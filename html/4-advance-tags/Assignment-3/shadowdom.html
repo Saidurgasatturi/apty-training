@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Shadow DOM & Template Example</title>
+</head>
+<body>
+  <template id="greeting-template">
+    <style>
+      .box {
+        padding: 10px;
+        background: lightblue;
+        border-radius: 6px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        margin: 5px;
+      }
+    </style>
+    <div class="box">
+      <span class="text">Hello!</span>
+    </div>
+  </template>
+
+  <script>
+    class GreetingBox extends HTMLElement {
+      static get observedAttributes() {
+        return ['message'];
+      }
+
+      constructor() {
+        super();
+        const template = document.getElementById('greeting-template').content;
+        this.attachShadow({ mode: 'open' }).appendChild(template.cloneNode(true));
+        this.textEl = this.shadowRoot.querySelector('.text');
+      }
+
+      connectedCallback() {
+        this._updateMessage();
+      }
+
+      attributeChangedCallback() {
+        this._updateMessage();
+      }
+
+      _updateMessage() {
+        if (this.hasAttribute('message')) {
+          this.textEl.textContent = this.getAttribute('message');
+        }
+      }
+    }
+
+    customElements.define('greeting-box', GreetingBox);
+  </script>
+
+  <greeting-box></greeting-box>
+  <greeting-box message="Welcome to Web Components!"></greeting-box>
+
+</body>
+</html>
