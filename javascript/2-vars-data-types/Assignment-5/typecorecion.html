@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Type Coercion Example</title>
+</head>
+<body>
+
+  <h2>JavaScript Type Coercion (Addition)</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = "";
+
+    let str = "10";
+    let num = 5;
+    let bool = true;
+    let undef;
+    let nul = null;
+    let obj = {name:"Sai"};
+
+
+    function show(expr, result) {
+      output += expr + " → " + result + "<br>";
+    }
+
+    show(`${num} + ${str}`, num + str);       
+    show(`${num} + ${bool}`, num + bool);     
+    show(`${num} + ${undef}`, num + undef);   
+    show(`${num} + ${nul}`, num + nul);       
+    show(`${num} + ${obj}`, num + obj);       
+
+    show(`${str} + ${bool}`, str + bool);     
+    show(`${str} + ${nul}`, str + nul);       
+    show(`${bool} + ${nul}`, bool + nul);     
+    show(`${bool} + ${str}`, bool + str);     
+
+    document.getElementById("output").innerHTML = output;
+  </script>
+
+</body>
+</html>

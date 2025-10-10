@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Type Conversion</title>
+</head>
+<body>
+
+  <h2>JavaScript Type Conversion Example</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = "";
+
+    let str = "123";
+    let num = 42;
+    let bool = true;
+    let undef; 
+    let nul = null;
+    let sym = Symbol("id");
+    let obj = {name:"Sai"};
+
+    function convertAndPrint(value, typeName) {
+
+      let displayValue = (typeof value === "symbol") ? value.toString() : value;
+      output += `<b>${typeName} (${displayValue})</b><br>`;
+ 
+      try {
+        let n = Number(value);
+        output += "Number(): " + n + "<br>";
+      } catch(e) {
+        output += "Number(): Error - " + e.message + "<br>";
+      }
+
+      try {
+        let s = String(value);
+        output += "String(): " + s + "<br>";
+      } catch(e) {
+        output += "String(): Error - " + e.message + "<br>";
+      }
+
+      try {
+        let b = Boolean(value);
+        output += "Boolean(): " + b + "<br><br>";
+      } catch(e) {
+        output += "Boolean(): Error - " + e.message + "<br><br>";
+      }
+    }
+    convertAndPrint(str, "String");
+    convertAndPrint(num, "Number");
+    convertAndPrint(bool, "Boolean");
+    convertAndPrint(undef, "Undefined");
+    convertAndPrint(nul, "Null");
+    convertAndPrint(sym, "Symbol");
+    convertAndPrint(obj, "Object");
+
+    document.getElementById("output").innerHTML = output;
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Inline, Internal & External JS Execution Order</title>
+</head>
+<body onload="document.getElementById('inline').innerHTML = 'Hello from Inline JS!'">
+
+  <h2>Execution Order Example</h2>
+   <p id="inline"></p>
+  <p id="internal"></p>
+  <p id="external"></p>
+
+  <script src="script.js"></script>
+
+
+  <script>
+    document.getElementById("internal").innerHTML = "Hello from Internal JS!";
+  </script>
+
+</body>
+</html>

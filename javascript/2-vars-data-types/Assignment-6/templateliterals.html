@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Literals and Data Types</title>
+</head>
+<body>
+
+  <h2>Template Literals with Different Data Types</h2>
+  <p id="output"></p>
+
+  <script>
+    let str = "Sai";
+    let num = 22;
+    let bool = true;
+    let undef;
+    let nul = null;
+    let sym = Symbol("id");
+    let obj = {course: "JavaScript", level: "Beginner"};
+
+
+    let result = `
+      String: ${str}<br>
+      Number: ${num}<br>
+      Boolean: ${bool}<br>
+      Undefined: ${undef}<br>
+      Null: ${nul}<br>
+      Symbol: ${sym.toString()}<br>
+      Object: ${JSON.stringify(obj)}<br><br>
+      Hello, my name is ${str} and I am ${num} years old. 
+      It is ${bool} that I love coding!
+    `;
+
+    document.getElementById("output").innerHTML = result;
+  </script>
+
+</body>
+</html>
