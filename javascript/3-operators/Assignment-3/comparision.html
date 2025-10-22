@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparison Operators App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Comparison Operators App</h2>
+
+  <div class="input-group">
+    <label>Value 1:</label>
+    <input type="text" id="value1" placeholder="Enter first value">
+    <label>Type:</label>
+    <select id="type1">
+      <option value="string">String</option>
+      <option value="number">Number</option>
+      <option value="boolean">Boolean</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label>Value 2:</label>
+    <input type="text" id="value2" placeholder="Enter second value">
+    <label>Type:</label>
+    <select id="type2">
+      <option value="string">String</option>
+      <option value="number">Number</option>
+      <option value="boolean">Boolean</option>
+    </select>
+  </div>
+
+  <div class="buttons">
+    <button onclick="equal()">==</button>
+    <button onclick="strictEqual()">===</button>
+    <button onclick="notEqual()">!=</button>
+    <button onclick="strictNotEqual()">!==</button>
+    <button onclick="greaterThan()">&gt;</button>
+    <button onclick="lessThan()">&lt;</button>
+    <button onclick="greaterOrEqual()">&gt;=</button>
+    <button onclick="lessOrEqual()">&lt;=</button>
+  </div>
+
+  <div id="result">Result will appear here</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
