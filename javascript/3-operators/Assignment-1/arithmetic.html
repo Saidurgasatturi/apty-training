@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Operators Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Arithmetic Operators Calculator</h2>
+
+  <label>Value 1:</label>
+  <input type="number" id="value1" placeholder="Enter first number"><br>
+
+  <label>Value 2:</label>
+  <input type="number" id="value2" placeholder="Enter second number"><br>
+
+  <div class="buttons">
+    <button onclick="add()">+</button>
+    <button onclick="subtract()">−</button>
+    <button onclick="multiply()">×</button>
+    <button onclick="divide()">÷</button>
+    <button onclick="modulus()">%</button>
+    <button onclick="increment()">++</button>
+    <button onclick="decrement()">--</button>
+  </div>
+
+  <div id="result">Result will appear here</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
