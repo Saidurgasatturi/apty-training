@@ -1,0 +1,66 @@
+:root{
+  --accent: #ff5722;
+  --accent2: #ff007f;
+  --bg: #f7f9fb;
+  --card: #fff;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+
+.container{
+  width:380px;
+  background:var(--card);
+  padding:26px;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+h2{ color:var(--accent); margin:0 0 14px 0 }
+
+.row{ margin:12px 0 }
+label{ display:block; margin-bottom:6px; font-weight:600; font-size:0.95rem }
+input[type="number"]{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:1rem;
+}
+
+.actions{ display:flex; gap:8px; justify-content:center }
+button{
+  padding:10px 14px;
+  border-radius:8px;
+  border:none;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:white;
+  font-weight:700;
+  cursor:pointer;
+}
+button.muted{
+  background:#eee; color:#333; font-weight:600;
+}
+
+#output{
+  margin-top:16px;
+  text-align:left;
+  background:#f0f0f0;
+  padding:12px;
+  border-radius:8px;
+  min-height:56px;
+}
+
+#output .steps{ font-family: monospace; white-space:pre-wrap; word-break:break-word }
+#output .final{ margin-top:10px; font-weight:800; color:#0b6d3a }
+#output .error{ color:#b00020; font-weight:700 }
+#output .hint{ color:#666 }

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Factorial Calculator (do-while)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Factorial Calculator (do-while)</h2>
+
+    <div class="row">
+      <label for="number">Enter a non-negative integer:</label>
+      <input type="number" id="number" min="0" placeholder="e.g., 5">
+    </div>
+
+    <div class="row actions">
+      <button onclick="computeFactorial()">Calculate Factorial</button>
+      <button onclick="clearAll()" class="muted">Clear</button>
+    </div>
+
+    <div id="output">
+      <p class="hint">Result and steps will appear here...</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
