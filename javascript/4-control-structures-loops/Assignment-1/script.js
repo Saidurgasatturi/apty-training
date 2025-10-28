@@ -12,7 +12,7 @@ function calculateGrade() {
   } else if (marks < 50) {
     grade = "F";
   } else {
-    grade = "Invalid input";
+    grade = "Invalid Input";
   }
 
 
