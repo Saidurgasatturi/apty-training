@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Error Handling - JSON Parsing</title>
+</head>
+<body>
+  <h2>JSON Parsing Example</h2>
+
+  <input type="text" id="jsonInput" value="{key: 'value'}">
+  <button onclick="parseJSON()">Parse JSON</button>
+
+  <p id="result"></p>
+
+  <script>
+    function parseJSON() {
+      const input = document.getElementById("jsonInput").value;
+      const result = document.getElementById("result");
+
+      try {
+        if (!input.trim()) {
+          throw new Error("Input is empty. Please provide valid JSON.");
+        }
+        const parsedData = JSON.parse(input);
+        result.innerHTML = `<strong>✅ Parsed Successfully:</strong> ${JSON.stringify(parsedData)}`;
+      } 
+      catch (error) {
+        if (error instanceof SyntaxError) {
+          result.innerHTML = `<span style="color:red;">❌ Invalid JSON format! ${error.message}</span>`;
+        } 
+        else {
+          result.innerHTML = `<span style="color:red;">⚠️ Error: ${error.message}</span>`;
+        }
+      } 
+      finally {
+        console.log("Parsing attempt completed."); // Always runs
+      }
+    }
+  </script>
+</body>
+</html>
