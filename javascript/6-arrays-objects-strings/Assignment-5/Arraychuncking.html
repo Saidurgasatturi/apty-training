@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Chunking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Array Chunking Program</h2>
+
+  <div class="container">
+    <label>Enter Array Elements (comma separated):</label><br>
+    <input type="text" id="arrayInput" placeholder="e.g. 1,2,3,4,5"><br><br>
+
+    <label>Enter Chunk Size:</label><br>
+    <input type="number" id="chunkSize" placeholder="e.g. 2"><br><br>
+
+    <button onclick="chunkArrayHandler()">Chunk Array</button>
+
+    <h3>Result:</h3>
+    <p id="result"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

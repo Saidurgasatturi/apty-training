@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4. Object Merging (Deep Merge)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>4. Object Merging (Deep Merge)</h2>
+
+  <div class="container">
+    <p><b>Problem:</b> Merge two objects into one, overwriting existing properties.  
+    Ensure it works even for nested objects (deep merge).</p>
+
+    <label>Enter First Object (in JSON format):</label>
+    <textarea id="obj1Input" rows="4">{ "a": 1, "b": { "x": 10 } }</textarea>
+
+    <label>Enter Second Object (in JSON format):</label>
+    <textarea id="obj2Input" rows="4">{ "b": { "y": 20 }, "c": 3 }</textarea>
+
+    <button onclick="mergeObjects()">Merge Objects</button>
+
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
