@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  text-align: center;
+}
+
+h2 {
+  color: #2a5d84;
+}
+
+.highlight {
+  background-color: lightblue;
+}
+
+#output {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px dashed #555;
+  background-color: #f5f5f5;
+}

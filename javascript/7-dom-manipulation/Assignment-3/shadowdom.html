@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accessing & Manipulating Shadow DOM Elements</title>
+  <style>
+    button {
+      margin: 6px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: none;
+      background: royalblue;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: dodgerblue;
+    }
+  </style>
+</head>
+<body>
+  <h2>3. Accessing and Manipulating Shadow DOM Elements</h2>
+  <button id="byIdBtn">Change Color by ID</button>
+  <button id="byClassBtn">Toggle Background by Class</button>
+  <button id="byTagBtn">Change Span Text by Tag</button>
+  <button id="byNameBtn">Toggle Disabled by Name</button>
+  <button id="byAttrBtn">Add Attribute by Selector</button>
+  <div id="shadow-host"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

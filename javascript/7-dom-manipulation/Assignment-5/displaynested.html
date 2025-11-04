@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>5. Display Nested Element Count</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>5. Display Nested Element Count</h2>
+
+  <div id="div1">
+    <p>Paragraph inside div1</p>
+    <span>Span inside div1</span>
+    <div>
+      <p>Nested paragraph inside div1</p>
+      <span>Deeply nested span inside div1</span>
+    </div>
+  </div>
+
+  <div id="div2">
+    <p>Paragraph inside div2</p>
+  </div>
+
+  <section id="section1">
+    <div>
+      <p>Paragraph inside section1</p>
+      <span>Span inside section1</span>
+    </div>
+  </section>
+
+  <button id="countBtn">Count Nested Elements</button>
+
+  <h3>Nested Element Count:</h3>
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

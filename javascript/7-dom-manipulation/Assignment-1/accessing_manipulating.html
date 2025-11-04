@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation - Assignment 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Assignment 1: Accessing and Manipulating Elements</h2>
+
+  <table>
+    <tr>
+      <th>id</th>
+      <th>className</th>
+      <th>tag</th>
+      <th>name</th>
+      <th>attribute</th>
+    </tr>
+
+    <tr>
+      <td>
+        <p id="para1">Paragraph 1</p>
+        <p id="para2">Paragraph 2</p>
+        <button onclick="changeColorById()">Change Color</button>
+      </td>
+      <td>
+        <p class="group">Class Element 1</p>
+        <p class="group">Class Element 2</p>
+        <p class="group">Class Element 3</p>
+        <button onclick="toggleClassColor()">Toggle Background</button>
+      </td>
+      <td>
+        <span>Tag Span 1</span><br>
+        <span>Tag Span 2</span><br>
+        <span>Tag Span 3</span><br>
+        <button onclick="changeSpanText()">Change Text</button>
+      </td>
+      <td>
+        <input type="text" name="user1" value="Sai"><br>
+        <input type="text" name="user2" value="Durga"><br>
+        <input type="text" name="user3" value="Chitti"><br>
+        <button onclick="toggleDisable()">Toggle Disable</button>
+      </td>
+      <td>
+        <p data-info="custom1">Custom Attribute 1</p>
+        <p data-info="custom2">Custom Attribute 2</p>
+        <button onclick="addCustomAttribute()">Add Attribute</button>
+      </td>
+    </tr>
+  </table>
+  <div id="output"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

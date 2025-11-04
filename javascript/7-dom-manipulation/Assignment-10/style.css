@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.controls button {
+  margin: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+button {
+  margin: 2px;
+  padding: 4px 6px;
+}

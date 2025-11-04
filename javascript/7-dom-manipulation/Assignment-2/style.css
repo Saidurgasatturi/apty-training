@@ -1,0 +1,20 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+table, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.highlight {
+  background-color: lightblue;
+}
+
+.output {
+  margin-top: 20px;
+  font-weight: bold;
+  color: darkgreen;
+}
