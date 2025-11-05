@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+}
+
+.editable {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.icon {
+  margin-left: 10px;
+}
+
+textarea {
+  width: 250px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 6px;
+}

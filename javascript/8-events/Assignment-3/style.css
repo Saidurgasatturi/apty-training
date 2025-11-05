@@ -1,0 +1,20 @@
+#level1, #level2, #level3 {
+  padding: 40px;
+  margin: 10px;
+  border: 2px solid black;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#level1 {
+  background-color: #ffd6d6;
+}
+
+#level2 {
+  background-color: #d6ffd6;
+}
+
+#level3 {
+  background-color: #d6d6ff;
+}

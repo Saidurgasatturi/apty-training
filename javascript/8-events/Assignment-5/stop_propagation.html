@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stop Event Propagation Example</title>
+  <style>
+    .parent {
+      background-color: lightcoral;
+      padding: 40px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .child {
+      background-color: lightgreen;
+      padding: 30px;
+      margin: 10px auto;
+      width: 60%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="parent" id="parentDiv">
+    Parent Div
+    <div class="child" id="childDiv">
+      Child Div (Click Me)
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

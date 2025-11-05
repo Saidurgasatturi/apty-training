@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prevent Default Example</title>
+  <style>
+    form {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      width: 300px;
+      border-radius: 10px;
+    }
+    input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 90%;
+    }
+    #message {
+      margin-top: 10px;
+      font-weight: bold;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="myForm">
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+    
+    <label>Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

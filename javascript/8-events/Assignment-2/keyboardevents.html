@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Events Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .box {
+      border: 2px solid black;
+      width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      font-size: 20px;
+      min-height: 50px;
+    }
+
+    .keydown {
+      background-color: lightblue;
+    }
+
+    .keyup {
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>Keyboard Events: Keydown & Keyup</h2>
+  <div class="box keydown" id="keydownDiv">KeyDown Events:</div>
+  <div class="box keyup" id="keyupDiv">KeyUp Events:</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
