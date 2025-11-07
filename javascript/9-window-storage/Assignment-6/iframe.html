@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iframe Window</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Iframe Window</h2>
+
+  <input type="text" id="iframeMsg" placeholder="Enter message to send to parent">
+  <button id="sendToParent">Send to Parent</button>
+
+  <h3>Message received from Parent:</h3>
+  <div id="receivedFromParent">(No messages yet)</div>
+
+  <script>
+    window.onmessage = (event) => {
+      document.getElementById("receivedFromParent").textContent =
+        "From Parent: " + event.data;
+    };
+    document.getElementById("sendToParent").addEventListener("click", () => {
+      const message = document.getElementById("iframeMsg").value.trim();
+      window.parent.postMessage(message || "No message", "*");
+    });
+  </script>
+</body>
+</html>

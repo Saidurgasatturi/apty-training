@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Window</title>
+  <style>
+    body { text-align: center; font-family: Arial; }
+    iframe { width: 80%; height: 250px; border: 2px solid black; margin: 10px; }
+    input, button { padding: 8px; margin: 5px; }
+  </style>
+</head>
+<body>
+  <h2>Main Window (Top)</h2>
+  <input id="mainMsg" placeholder="Message to send to iframe">
+  <button id="sendToIframe">Send to Iframe</button>
+  <p><strong>Message from iframe:</strong> <span id="mainReceived">None</span></p>
+
+  <iframe id="outerFrame" src="iframe.html"></iframe>
+
+  <script>
+    const iframe = document.getElementById("outerFrame");
+    document.getElementById("sendToIframe").addEventListener("click", () => {
+      const msg = document.getElementById("mainMsg").value.trim();
+      iframe.contentWindow.postMessage(msg || "No message", "*");
+    });
+    window.onmessage = (event) => {
+      document.getElementById("mainReceived").textContent = event.data;
+    };
+  </script>
+</body>
+</html>

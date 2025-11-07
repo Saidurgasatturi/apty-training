@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Iframe</title>
+  <style>
+    body { text-align: center; font-family: Arial; }
+    iframe { width: 80%; height: 150px; border: 2px solid blue; margin: 10px; }
+    input, button { padding: 6px; margin: 4px; }
+  </style>
+</head>
+<body>
+  <h3>Iframe Window</h3>
+  <input id="iframeMsg" placeholder="Message to send to top window">
+  <button id="sendToTop">Send to Top</button>
+  <p><strong>Message from Main:</strong> <span id="iframeReceived">None</span></p>
+
+  <iframe id="innerFrame" src="innerIframe.html"></iframe>
+
+  <script>
+    // Receive message from main
+    window.onmessage = (event) => {
+      document.getElementById("iframeReceived").textContent = event.data;
+    };
+
+    // Send message to top-most window
+    document.getElementById("sendToTop").addEventListener("click", () => {
+      const msg = document.getElementById("iframeMsg").value.trim();
+      window.top.postMessage("From iframe: " + (msg || "No message"), "*");
+    });
+  </script>
+</body>
+</html>

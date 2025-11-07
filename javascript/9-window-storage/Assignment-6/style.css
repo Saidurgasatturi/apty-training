@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+input {
+  padding: 8px;
+  width: 250px;
+}
+
+button {
+  padding: 8px 15px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+iframe {
+  width: 90%;
+  height: 250px;
+  border: 2px solid black;
+  margin-top: 20px;
+}

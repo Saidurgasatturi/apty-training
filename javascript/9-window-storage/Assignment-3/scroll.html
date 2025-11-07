@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Scroll to Position</h2>
+
+  <div class="controls">
+    <label for="xInput">X:</label>
+    <input type="number" id="xInput" placeholder="Enter X value">
+    
+    <label for="yInput">Y:</label>
+    <input type="number" id="yInput" placeholder="Enter Y value">
+    
+    <button onclick="scrollToPosition()">Scroll to (X, Y)</button>
+  </div>
+
+  <div class="scroll-buttons">
+    <button onclick="scrollUp()">Scroll Up 10px</button>
+    <button onclick="scrollDown()">Scroll Down 10px</button>
+  </div>
+
+  <div class="content">
+    <p>Scroll this page to test the scrolling feature!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <p style="margin-top:2000px;">You’ve reached the bottom!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

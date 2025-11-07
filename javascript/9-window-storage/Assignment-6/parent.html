@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Messaging - Parent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Parent Window</h2>
+
+  <input type="text" id="parentMsg" placeholder="Enter message to send to iframe">
+  <button id="sendToIframe">Send to Iframe</button>
+
+  <h3>Message received from Iframe:</h3>
+  <div id="receivedFromIframe">(No messages yet)</div>
+
+  <hr>
+
+  <iframe id="childFrame" src="iframe.html"></iframe>
+
+  <script src="script.js"></script>
+</body>
+</html>

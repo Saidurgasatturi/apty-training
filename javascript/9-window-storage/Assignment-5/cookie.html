@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies Example</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2> Cookie Manager</h2>
+
+  <div class="container">
+    <label>Cookie Name:</label>
+    <input type="text" id="cookieName" placeholder="Enter cookie name">
+
+    <label>Cookie Value:</label>
+    <input type="text" id="cookieValue" placeholder="Enter cookie value">
+
+    <label>Expire Days:</label>
+    <input type="number" id="expireDays" placeholder="Days to expire">
+
+    <div class="btn-group">
+      <button onclick="setCookieHandler()">Set Cookie</button>
+      <button onclick="readCookiesHandler()">Read Cookies</button>
+      <button onclick="deleteCookieHandler()">Delete Cookie</button>
+    </div>
+
+    <h3> Current Cookies:</h3>
+    <pre id="cookieDisplay">(No cookies yet)</pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
